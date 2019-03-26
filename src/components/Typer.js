@@ -22,22 +22,24 @@ class Typer extends Component {
     clearInterval(this.state.intervalId);
   }
   AddLetter = () => {
-    if (this.state.timePassed < this.state.letters.length) {
-      if (this.state.timePassed < this.props.lines[0].length) {
+    const {firstLineOutput, secondLineOutput, letters, timePassed} = this.state;
+
+    // If typing first row
+    if (timePassed < letters.length) {
+      if (timePassed < this.props.lines[0].length) {
         this.setState({
-          firstLineOutput: this.state.firstLineOutput+this.state.letters[this.state.timePassed]
+          firstLineOutput: firstLineOutput+letters[timePassed]
         })
       } else {
         this.setState({
-          secondLineOutput: this.state.secondLineOutput+this.state.letters[this.state.timePassed]
+          secondLineOutput: secondLineOutput+letters[timePassed]
         });
       }
     }
-
-      this.setState({
-        timePassed: this.state.timePassed+1
-      })
-      console.log(this.state.timePassed)
+    this.setState({
+      timePassed: timePassed+1
+    })
+      console.log(timePassed)
     }
 
   render() {
