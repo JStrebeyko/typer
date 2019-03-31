@@ -25,7 +25,7 @@ Name | Type | Default | Usage
 
 ## Contributing
 
-To be able to painlessly contribute to the project, [please see here contribution guide](https://github.com/JStrebeyko/typer/blob/master/CONTRIBUTING.md).
+To be able to painlessly contribute to the project, [please see the contribution guide here](https://github.com/JStrebeyko/typer/blob/master/CONTRIBUTING.md).
 
 ## Available Scripts
 
