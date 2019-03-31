@@ -17,11 +17,13 @@ Name | Type | Default | Usage
 
 - [x] finish the main functionality by adding removal
 - [x] add `eternal` functionality
-- [] add `textCursor` functionality
-- [] tests
-- [] create a demo
+- [ ] add `textCursor` functionality
+- [ ] tests
+- [ ] create a demo
 
+## Contributing
 
+To be able to painlessly contribute to the project, [please see here](https://github.com/JStrebeyko/typer/blob/master/CONTRIBUTING.md)
 
 ## Available Scripts
 
