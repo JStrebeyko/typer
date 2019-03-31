@@ -2,6 +2,17 @@
 
 This is my take on creating a two-lines typer - a React component taking in an array prop, which is then displaying them (or rather *typing* them out) starting from the first element on the first line, then the next one the second line and, in case there are more, erase line number two's contents and type the upcoming line, and so on.
 
+
+## Props
+
+Name | Type | Default | Usage
+---|---|---|---
+`lines`| *Array* | -- | Entry point for the strings to be typed in
+`typingSpeed` | *Number* | `500` | Determine how fast the characters should be inputted
+`deletingSpeed` | *Number* | `200` | Control the speed of deletion
+`eternal` | *Boolean* | `false` | Switches on the eternal mode, meaning the second row will keep on being deleted and typed in
+
+
 ## TODO:
 
 - [x] finish the main functionality by adding removal
@@ -9,6 +20,8 @@ This is my take on creating a two-lines typer - a React component taking in an a
 - [] add `textCursor` functionality
 - [] tests
 - [] create a demo
+
+
 
 ## Available Scripts
 
