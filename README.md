@@ -1,6 +1,6 @@
 # React Typer
 
-This is my take on creating a two-lines typer - a React component taking in an array prop, which is then displaying them (or rather *typing* them out) starting from the first element on the first line, then the next one the second line and, in case there are more, erase line number two's contents and type the upcoming line, and so on.
+This is my take on creating a two-lines typer - a React component taking in an array prop, which is then displaying them (or rather *typing* them out) starting from the first element on the first line, then the next one the second line and, in case there are more, erase line number two's contents and type the upcoming line, and so on. Check it out in action - [DEMO](https://jstrebeyko.github.io/typer/)
 
 
 ## Props
@@ -19,7 +19,7 @@ Name | Type | Default | Usage
 - [x] add `eternal` functionality
 - [ ] add `textCursor` functionality
 - [ ] tests
-- [ ] create a demo
+- [x] create a demo
 
 ## Contributing
 
