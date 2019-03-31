@@ -5,6 +5,7 @@ class Typer extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      lines: this.props.lines,
       lineCounter: 0,
       charCounter: 0,
       firstLineOutput: '',
@@ -26,19 +27,31 @@ class Typer extends Component {
       this.props.lines[0] && this.startTimer()
     }
   }
+
+  // this is me, frantically trying to manage props change
+  componentDidUpdate(prevProps) {
+    if (this.props.lines!==prevProps.lines) {
+      this.setState({
+        lines: this.props.lines,
+        charCounter: 0,
+        firstLineOutput: this.props.lines[0],
+        lineCounter: 1,
+      })
+      this.startTimer();
+    }
+  }
+
   componentWillUnmount() {
     this.stopTimer()
   }
 
   startTimer = () => {
-    let intervalId = setInterval(this.type, this.props.typingSpeed);
-    this.setState({
-      intervalId: intervalId,
-    })
+    this.stopTimer();
+    this.intervalId = setInterval(this.type, this.props.typingSpeed);
   }
 
   stopTimer = () => {
-    clearInterval(this.state.intervalId);
+    clearInterval(this.intervalId);
   }
 
   type = () => {
@@ -84,10 +97,14 @@ class Typer extends Component {
   addLetter = (what, where) => {
     const {charCounter} = this.state;
 
+    if (what[charCounter]) {
+
       this.setState({
         [where]: this.state[where] + what[charCounter],
         charCounter: charCounter + 1
       })
+    }
+
   }
 
   eraseSecondLine = () => {
