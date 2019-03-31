@@ -9,7 +9,8 @@ class App extends Component {
     this.state={
       lines: [
         'puk puk',
-        'kto tam?'
+        'kto tam?',
+        'chico...'
       ]
     }
   }
@@ -18,7 +19,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-            <Typer lines={this.state.lines} interval={500}/>
+            <Typer lines={this.state.lines} interval={100}/>
         </header>
       </div>
     );
